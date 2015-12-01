@@ -4,6 +4,8 @@ exports.SPLIT_TEXT = '@';
 exports.eraseWords = [
 	',',
 	'；',
+	"?",
+	"!",
 	'(',')',
 	'（','）',
 	'<','>',
@@ -19,7 +21,6 @@ exports.eraseWords = [
 	'»',
 	'·',
 	'...',
-	'  ',
 	'　',
 	'❌',
 ];
@@ -27,8 +28,6 @@ exports.eraseWords = [
 exports.splitWords = [
 	'。',
 	'、',
-	"?",
-	"!",
 	"！",
 	"？"
 ];

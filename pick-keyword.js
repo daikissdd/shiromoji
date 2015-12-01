@@ -1,18 +1,36 @@
 var _ = require('lodash');
+var S = require('string');
+
+var isTrashText = function(text) {
+	if (text.length === 0) return true;
+	if (text.length === 1) {
+		if (text.match(new RegExp(/[!"#$%&'()\*\+\-\.,\/:;<=>?@\[\\\]^_`{|}~]/g))) return true;
+	}
+};
 
 module.exports = function(kuromojiWords) {
 	var tmp = '';
 	var keywords = [];
 	_.each(kuromojiWords, (kuromojiWord, i) => {
-		if (kuromojiWord.pos !== '名詞') {
+		var text = kuromojiWord.surface_form;
+		
+		var isNoun = (kuromojiWord.pos !== '名詞');
+		if (isNoun || isTrashText(text)) {
 			if (i === 0 || tmp === '') return;
 			keywords.push(tmp);
 			return tmp = '';
 		};
-		tmp += kuromojiWord.surface_form;
+		
+		var isInclude = S(tmp).include(text);
+		if (isInclude) {
+			keywords.push(tmp);
+			return tmp = text;
+		}
 		
 		var isLast = (i === kuromojiWords.length - 1);
-		if (isLast) keywords.push(tmp);
+		if (isLast) return keywords.push(tmp);
+		
+		tmp += text;
 	});
 	return keywords;
 };
