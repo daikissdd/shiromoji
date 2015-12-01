@@ -1,0 +1,17 @@
+{
+  "name": "shiromoji",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "kuromoji": "0.0.5",
+    "lodash": "^3.10.1",
+    "string": "^3.3.1"
+  }
+}
