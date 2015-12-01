@@ -10,7 +10,9 @@ module.exports = function(kuromojiWords) {
 			return tmp = '';
 		};
 		tmp += kuromojiWord.surface_form;
-		if (i === kuromojiWords.length - 1) keywords.push(tmp);
+		
+		var isLast = (i === kuromojiWords.length - 1);
+		if (isLast) keywords.push(tmp);
 	});
 	return keywords;
 };
