@@ -22,6 +22,7 @@ var shiromoji = function(text, callback) {
 		callback(null, keywords);
 	});
 };
+
 shiromoji.count = require('./keyword-count');
 shiromoji.countAll = require('./keyword-count-all');
 

@@ -7,8 +7,13 @@ module.exports = function(countKeywords) {
 		if (!match) return;
 		
 		var existWord = _.find(results, function(target) { return match.word === target.word; });
-		if (existWord) return existWord.count++;
+		if (existWord) {
+			existWord.count += existWord.count;
+			existWord.pageUseCount++;
+			return;
+		}
 		
+		match.pageUseCount = 1;
 		results.push(match);
 	};
 	

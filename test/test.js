@@ -19,3 +19,10 @@ shiromoji(text1, function(err, k1) {
 		});
 	});
 });
+
+
+/*
+{ word: '憲法', count: 396, pageUseCount: 3 }
+{ word: '憲法', count: 198, pageUseCount: 2 }
+{ word: '憲法', count: 99, pageUseCount: 1 }
+*/
