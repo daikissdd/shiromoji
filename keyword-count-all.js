@@ -22,5 +22,5 @@ module.exports = function(countKeywords) {
 		_.each(keys, pickMatchWord, keywords);
 	});
 	
-	return results;
+	return _.sortBy(results, function(data) { return data.pageUseCount; });
 };
