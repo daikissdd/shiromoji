@@ -5,10 +5,8 @@ var clearText = require('./clean-ja-text.js');
 var splitText = require('./split-ja-text.js');
 var pickKeyword = require('./pick-keyword.js');
 var isTrash = require('./is-trash.js');
-
-module.exports = function(text, callback) {
+var shiromoji = function(text, callback) {
 	var dic = {dicPath: './node_modules/kuromoji/dist/dict/'};
-	
 	kuromoji.builder(dic).build(function(err, tokenizer) {
 		if (err) return callback(err, null);
 		var _keywords = [];
@@ -24,3 +22,7 @@ module.exports = function(text, callback) {
 		callback(null, keywords);
 	});
 };
+shiromoji.count = require('./keyword-count');
+shiromoji.countAll = require('./keyword-count-all');
+
+module.exports = shiromoji;
