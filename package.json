@@ -1,10 +1,11 @@
 {
   "name": "shiromoji",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "shiromoji",
   "main": "index.js",
   "scripts": {
-    "start": "node ./test/test.js"
+    "start": "node index.js",
+    "test": "./node_modules/.bin/mocha"
   },
   "keywords": [
     "node",
@@ -22,5 +23,10 @@
     "kuromoji": "0.0.5",
     "lodash": "^3.10.1",
     "string": "^3.3.1"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4",
+    "search-scraper-jp": "^1.0.3"
   }
 }

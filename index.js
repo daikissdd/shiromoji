@@ -24,7 +24,7 @@ var shiromoji = function(text, callback) {
 	});
 };
 
-shiromoji.count = require('./keyword-count');
-shiromoji.countAll = require('./keyword-count-all');
+shiromoji.count = require('./lib/keyword-count');
+shiromoji.countAll = require('./lib/keyword-count-all');
 
 module.exports = shiromoji;
