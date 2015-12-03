@@ -1,10 +1,11 @@
 var kuromoji = require('kuromoji');
 var _ = require('lodash');
 var S = require('string');
-var clearText = require('./clean-ja-text.js');
-var splitText = require('./split-ja-text.js');
-var pickKeyword = require('./pick-keyword.js');
-var isTrash = require('./is-trash.js');
+var clearText = require('./lib/clean-ja-text.js');
+var splitText = require('./lib/split-ja-text.js');
+var pickKeyword = require('./lib/pick-keyword.js');
+var isTrash = require('./lib/is-trash.js');
+
 var shiromoji = function(text, callback) {
 	var dic = {dicPath: './node_modules/kuromoji/dist/dict/'};
 	kuromoji.builder(dic).build(function(err, tokenizer) {

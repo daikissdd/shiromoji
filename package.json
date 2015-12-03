@@ -4,11 +4,19 @@
   "description": "shiromoji",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./test/test.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "node",
+    "kuromoji",
+    "mecab"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daikissdd/shiromoji.git"
+  },
+  "author": "daikissdd",
+  "license": "MIT",
   "dependencies": {
     "jaco": "^1.2.1",
     "kuromoji": "0.0.5",
