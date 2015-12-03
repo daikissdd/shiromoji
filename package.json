@@ -19,6 +19,7 @@
   "author": "daikissdd",
   "license": "MIT",
   "dependencies": {
+    "async": "^1.5.0",
     "jaco": "^1.2.1",
     "kuromoji": "0.0.5",
     "lodash": "^3.10.1",
