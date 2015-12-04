@@ -1,6 +1,6 @@
 {
   "name": "shiromoji",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "shiromoji",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,7 @@
   "keywords": [
     "node",
     "kuromoji",
+    "shiromoji",
     "mecab"
   ],
   "repository": {
