@@ -12,9 +12,9 @@ var countAll = shiromoji.countAll;
 
 var arr = [];
 var texts = [];
-texts.push(fs.readFileSync('./test/sample1.txt'));
-texts.push(fs.readFileSync('./test/sample2.txt'));
-texts.push(fs.readFileSync('./test/sample3.txt'));
+texts.push(fs.readFileSync('./test/testdata/sample1.txt'));
+texts.push(fs.readFileSync('./test/testdata/sample2.txt'));
+texts.push(fs.readFileSync('./test/testdata/sample3.txt'));
 
 describe('shiromoji', () => {
 	it('lodash method test', (done) => {
