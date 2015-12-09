@@ -16,8 +16,8 @@ texts.push(fs.readFileSync('./test/testdata/sample1.txt'));
 texts.push(fs.readFileSync('./test/testdata/sample2.txt'));
 texts.push(fs.readFileSync('./test/testdata/sample3.txt'));
 
-describe('shiromoji', () => {
-	it('lodash method test', (done) => {
+describe('shiromoji', function() {
+	it('lodash method test', function(done) {
 		var arr = [
 			'かぼちゃ', 'かぼちゃ',
 			'りんご', 'りんご', 'りんご', 'りんご',
@@ -35,12 +35,13 @@ describe('shiromoji', () => {
 		done();
 	});
 	
-	it('shiromoji & count', (done) => {
-		async.each(texts, (text, next) => {
-			shiromoji(text, (err, res) => {
+	var arr = [];
+	it('shiromoji & count', function(done) {
+		async.each(texts, function(text, next) {
+			shiromoji(text, function(err, res) {
 				var countKeywords = count(res);
 				expect(countKeywords).to.be.a('array');
-				_.each(countKeywords, (countKeyword) => {
+				_.each(countKeywords, function(countKeyword) {
 					expect(countKeyword.word).to.be.a('string');
 					expect(countKeyword.count).to.be.a('number');
 					expect(countKeyword.pageUseCount).to.be.a('number');
@@ -52,10 +53,10 @@ describe('shiromoji', () => {
 		}, done);
 	});
 	
-	it('all count', (done) => {
+	it('all count', function(done) {
 		var countAllKeywords = countAll(arr);
 		expect(countAllKeywords).to.be.a('array');
-		_.each(countAllKeywords, (countKeyword) => {
+		_.each(countAllKeywords, function(countKeyword) {
 			expect(countKeyword.word).to.be.a('string');
 			expect(countKeyword.count).to.be.a('number');
 			expect(countKeyword.pageUseCount).to.be.a('number');

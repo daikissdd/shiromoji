@@ -10,8 +10,8 @@ var shiromoji = require('../index');
 var count = shiromoji.count;
 var countAll = shiromoji.countAll;
 
-describe('shiromoji Count All', () => {
-	it('count-all', (done) => {
+describe('shiromoji Count All', function() {
+	it('count-all', function(done) {
 		var results = JSON.parse(fs.readFileSync('./test/testdata/results.json'));
 		var countAllKeywords = countAll(_.pluck(results, 'countKeywords'));
 		
