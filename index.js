@@ -17,7 +17,7 @@ var shiromoji = function(text, callback) {
 		});
 		
 		var keywords = [];
-		_.each(_.flatten(_keywords, true), keyword => {
+		_.each(_.flatten(_keywords, true), function(keyword) {
 			if (!isTrash(keyword)) keywords.push(keyword);
 		});
 		callback(null, keywords);
