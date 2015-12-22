@@ -3,11 +3,16 @@ shiromoji.js
 
 [![Circle CI](https://circleci.com/gh/daikissdd/search-scraper-jp.svg?style=svg)](https://circleci.com/gh/daikissdd/search-scraper-jp)
 
-# Search engine & page content scrapping
+# Text pickup keyword engine
 
 ## Using 
 
 ```
+var _ = require('lodash');
+var shiromoji = require('shiromoji');
+var count = shiromoji.count;
+var countAll = shiromoji.countAll;
+
 shiromoji(text, (err, res) => {
 	var countKeywords = count(res);
 	expect(countKeywords).to.be.a('array');
