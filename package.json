@@ -1,6 +1,6 @@
 {
   "name": "shiromoji",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "shiromoji",
   "main": "index.js",
   "scripts": {
@@ -29,6 +29,6 @@
   "devDependencies": {
     "chai": "^3.4.1",
     "mocha": "^2.3.4",
-    "search-scraper-jp": "^1.0.3"
+    "search-scraper-jp": "1.0.8"
   }
 }
